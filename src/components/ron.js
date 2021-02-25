@@ -8,7 +8,7 @@ const Ron = () => {
   const getQuote = async () => {
     await fetch('https://ron-swanson-quotes.herokuapp.com/v2/quotes')
       .then((response) => response.json())
-      .then((data) => setQuote(data[0]));
+      .then((data) => setQuote(`"${data[0]}"`));
   };
 
   return (
